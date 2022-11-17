@@ -7,6 +7,23 @@ public class Tile : MonoBehaviour
     [SerializeField] private Color _baseColor, _offsetColor;
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private GameObject highlight;
+    public bool isOccupied;
+    public Color blueColor;
+
+
+    private void Start()
+    {
+        _renderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        if (isOccupied == true)
+        {
+            _renderer.color = blueColor;
+        }
+        
+    }
 
 
     public void Init(bool isOffset)
