@@ -8,6 +8,7 @@ public class CharacterController2D : MonoBehaviour
     Rigidbody2D rigidBody2D;
     [SerializeField] float Speed=2f;
     Vector2 motionVector;
+    public Vector2 lastMotionVector;
 
 
     void Awake()
@@ -17,6 +18,10 @@ public class CharacterController2D : MonoBehaviour
 
     private void Update()
     {
+        float horizontal;
+
+
+
         motionVector = new Vector2(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")).normalized;
