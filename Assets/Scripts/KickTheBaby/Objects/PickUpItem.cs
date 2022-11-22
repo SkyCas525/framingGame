@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickUpItem : MonoBehaviour
 {
+    
     Transform Player;
     [SerializeField] float speed = 5f;
     [SerializeField] float pickUpDistance = 1.5f;
