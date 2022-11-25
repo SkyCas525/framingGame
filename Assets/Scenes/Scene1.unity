@@ -485,7 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 565372540}
   timeScale: 6000
-  nightLightColor: {r: 0.1445354, g: 0.1789994, b: 0.3301887, a: 0}
+  nightLightColor: {r: 0.19405483, g: 0.23999463, b: 0.4339623, a: 0}
   nightTimeCurve:
     serializedVersion: 2
     m_Curve:
@@ -517,8 +517,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.10494801
     - serializedVersion: 3
-      time: 17.98536
-      value: -0.00024414062
+      time: 20.365608
+      value: -0.004699707
       inSlope: 0.0005027112
       outSlope: 0.0005027112
       tangentMode: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
       inWeight: 0.11338836
       outWeight: 0.2949003
     - serializedVersion: 3
-      time: 19.580315
+      time: 22.207573
       value: 1
       inSlope: 0.00020143468
       outSlope: 0.00020143468
