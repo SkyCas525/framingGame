@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class ItemDragAndDropController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] ItemSlot itemSlot;
+
+    private void Start()
     {
-        
+        itemSlot = new ItemSlot();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClick(ItemSlot itemSlot)
     {
-        
+        if (this.itemSlot.item == null )
+        {
+            this.itemSlot.Copy(itemSlot);
+            itemSlot.Clear();
+        }
+        else
+        {
+            Item item = itemSlot.item;
+            int count = itemSlot.count;
+
+            itemSlot.Copy(this.itemSlot);
+            this.itemSlot.Sety(item, count);
+        }
     }
+
 }
