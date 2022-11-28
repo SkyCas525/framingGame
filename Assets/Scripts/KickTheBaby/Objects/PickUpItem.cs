@@ -10,9 +10,21 @@ public class PickUpItem : MonoBehaviour
     [SerializeField] float pickUpDistance = 1.5f;
     [SerializeField] float ttl = 10f;
 
+    public Item item;
+    public int count = 1;
+
     private void Awake()
     {
         Player = GameManager.Instance.player.transform;
+    }
+
+    public void Set(Item item, int count)
+    {
+        this.item = item;
+        this.count = count;
+
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        renderer.sprite = item.icon;
     }
 
     private void Update()
@@ -30,6 +42,15 @@ public class PickUpItem : MonoBehaviour
 
         if (distance< 0.1f)
         {
+            if (GameManager.Instance.inventoryContainer!=null)
+            {
+                GameManager.Instance.inventoryContainer.Add(item, count);
+            }
+            else
+            {
+                Debug.LogWarning("no inventory in the gameManager");
+            }
+
             Destroy(gameObject);
         }
     }
