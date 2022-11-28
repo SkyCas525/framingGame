@@ -9,7 +9,7 @@ public class ItemSlot
     public Item item;
     public int count;
 
-    public void Sety(Item item, int count)
+    public void Set(Item item, int count)
     {
         this.item = item;
         this.count = count;
@@ -40,14 +40,14 @@ public class ItemContainer : ScriptableObject
     {
         if (item.stackable == true) // este sirve para agregar objetos que si se pueden acomular
         {
-            ItemSlot itemSlot = slots.Find(x => x.item);
+            ItemSlot itemSlot = slots.Find(x => x.item == item);
             if (itemSlot != null)
             {
                 itemSlot.count += count;
             }
             else
             {
-                itemSlot = slots.Find(x => x.item == null);
+               itemSlot = slots.Find(x => x.item == null);
                 if (itemSlot != null)
                 {
                     itemSlot.item = item;

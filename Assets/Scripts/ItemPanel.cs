@@ -1,14 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryPanel : ItemPanel
+public class ItemPanel : MonoBehaviour
 {
-    /*[SerializeField] ItemContainer inventory;
-    [SerializeField] List<InventoryButton> buttons;
+    public ItemContainer inventory;
+    public List<InventoryButton> buttons;
 
     private void Start()
+    {
+        Init();
+    }
+    public void Init()
     {
         SetIndex();
         Show();
@@ -16,7 +19,7 @@ public class InventoryPanel : ItemPanel
 
     private void SetIndex()
     {
-        for (int i = 0; i < inventory.slots.Count && buttons.Count >i; i++)
+        for (int i = 0; i < inventory.slots.Count && buttons.Count > i; i++)
         {
             buttons[i].SetIndex(i);
         }
@@ -40,11 +43,10 @@ public class InventoryPanel : ItemPanel
                 buttons[i].Set(inventory.slots[i]);
             }
         }
-    }*/
+    }
 
-    public override void OnClick(int id)
+    public virtual void OnClick(int id)
     {
-        GameManager.Instance.itemDragAndDropController.OnClick(inventory.slots[id]);
-        Show();
+
     }
 }

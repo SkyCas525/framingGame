@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class InventoryButton : MonoBehaviour //IPointerClickHandler
+public class InventoryButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Image icon;
     [SerializeField] Text text;
+    [SerializeField] Image highLight;
 
     int myIndex;
 
@@ -20,6 +21,8 @@ public class InventoryButton : MonoBehaviour //IPointerClickHandler
     {
         icon.gameObject.SetActive(true);
         icon.sprite = slot.item.icon;
+
+       
 
         if (slot.item.stackable ==true)
         {
@@ -41,10 +44,19 @@ public class InventoryButton : MonoBehaviour //IPointerClickHandler
         text.gameObject.SetActive(false);  
     }
 
-   /* public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        ItemContainer inventory = GameManager.Instance.itemContainer;
+        /*ItemContainer inventory = GameManager.Instance.inventoryContainer;
         GameManager.Instance.itemDragAndDropController.OnClick(inventory.slots[myIndex]);
-        transform.parent.GetComponent<InventoryPanel>().Show();
-    }*/
+        transform.parent.GetComponent<InventoryPanel>().Show();*/
+
+        ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
+        itemPanel.OnClick(myIndex);
+
+    }
+
+    public void HighLight(bool b)
+    {
+        highLight.gameObject.SetActive(b);
+    }
 }

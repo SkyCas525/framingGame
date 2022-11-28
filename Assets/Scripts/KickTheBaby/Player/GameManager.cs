@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject player;
-    public ItemContainer itemContainer;
+    public ItemContainer inventoryContainer;
     public ItemDragAndDropController itemDragAndDropController;
 
 }

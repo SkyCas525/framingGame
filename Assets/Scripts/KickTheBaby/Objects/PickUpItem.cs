@@ -18,6 +18,15 @@ public class PickUpItem : MonoBehaviour
         Player = GameManager.Instance.player.transform;
     }
 
+    public void Set(Item item, int count)
+    {
+        this.item = item;
+        this.count = count;
+
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        renderer.sprite = item.icon;
+    }
+
     private void Update()
     {
         ttl -= Time.deltaTime;
@@ -33,9 +42,9 @@ public class PickUpItem : MonoBehaviour
 
         if (distance< 0.1f)
         {
-            if (GameManager.Instance.itemContainer!=null)
+            if (GameManager.Instance.inventoryContainer!=null)
             {
-                GameManager.Instance.itemContainer.Add(item, count);
+                GameManager.Instance.inventoryContainer.Add(item, count);
             }
             else
             {
