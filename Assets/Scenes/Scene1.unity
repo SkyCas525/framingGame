@@ -1545,6 +1545,7 @@ GameObject:
   - component: {fileID: 783152469}
   - component: {fileID: 783152471}
   - component: {fileID: 783152472}
+  - component: {fileID: 783152473}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1671,6 +1672,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   dayLightColor: {r: 1, g: 1, b: 1, a: 1}
   globalLight: {fileID: 1993406242}
+--- !u!114 &783152473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783152468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d51afe6ff75e39543a8cdc30eaaded0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &801884867 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8777193505995629313, guid: bc7dbdbbdb2256142880bdedd28c0e9f, type: 3}
