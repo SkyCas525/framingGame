@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Wood
   stackable: 1
-  icon: {fileID: 21300000, guid: 900c494657aedf947a87e9bcc99c4e21, type: 3}
+  icon: {fileID: 21300000, guid: a9a1b675dfa2be64d8c7b9ff1fbcabcf, type: 3}
