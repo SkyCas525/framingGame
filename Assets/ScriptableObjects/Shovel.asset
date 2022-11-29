@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b147bd028e9a3e04ea43c71658b47e2f, type: 3}
-  m_Name: Axe
+  m_Name: Shovel
   m_EditorClassIdentifier: 
-  Name: Axe
+  Name: shovel
   stackable: 0
-  icon: {fileID: 21300000, guid: 4082329378a60b94d92843584881de62, type: 3}
+  icon: {fileID: 21300000, guid: 2a8b82b21d2052543a7a4118098d4f26, type: 3}

@@ -49,11 +49,11 @@ MonoBehaviour:
     count: 32
   - item: {fileID: 0}
     count: 66
-  - item: {fileID: 0}
+  - item: {fileID: 11400000, guid: 417d0320936ea424488293d0ab79bfa7, type: 2}
     count: 0
-  - item: {fileID: 0}
+  - item: {fileID: 11400000, guid: 417d0320936ea424488293d0ab79bfa7, type: 2}
     count: 0
-  - item: {fileID: 0}
+  - item: {fileID: 11400000, guid: 72f9df91e0068ed4fb80099e01bd647d, type: 2}
     count: 0
   - item: {fileID: 0}
     count: 0
