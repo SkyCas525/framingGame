@@ -9,7 +9,13 @@ public class ToolCharacterController : MonoBehaviour
     Rigidbody2D rgbd2D;
     [SerializeField] float offsetDistance = 1f;
     [SerializeField] float sizeOfInteractableArea = 1.5f;
+    [SerializeField] MarkerManager markerManager;
+    [SerializeField] TileMapReadController tileMapReadController;
+    [SerializeField] float maxDistance = 1.5f;
+    [SerializeField] CropsManager cropsManager;
 
+    Vector3Int selectedTilePosition;
+    bool selectable;
 
 
     private void Awake()
@@ -20,13 +26,39 @@ public class ToolCharacterController : MonoBehaviour
 
     private void Update()
     {
+        SelectTile();
+        CanSelectCheck();
+        Marker();
         if (Input.GetMouseButtonDown(0))
         {
-            UseTool();
+            if (UseToolWorld() == true)
+            {
+                return;
+            }
+            
+            UseToolGrid();
         }
     }
 
-    private void UseTool()
+    private void SelectTile()
+    {
+        selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
+    }
+
+    void CanSelectCheck()
+    {
+        Vector2 characterPosition = transform.position;
+        Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        selectable = Vector2.Distance(characterPosition, cameraPosition) < maxDistance;
+        markerManager.Show(selectable);
+    }
+    private void Marker()
+    {
+
+        markerManager.markedCellPosition = selectedTilePosition;
+    }
+
+    private bool UseToolWorld()
     {
         Vector2 position = rgbd2D.position + character.lastMotionVector * offsetDistance;
 
@@ -38,12 +70,28 @@ public class ToolCharacterController : MonoBehaviour
             if (hit != null)
             {
                 hit.Hit();
-                break; 
+                return true; 
             }
         }
+        return false;
 
     }
 
+    private void UseToolGrid()
+    {
+        if (selectable == true)
+        {
 
+            if (cropsManager.Check(selectedTilePosition))
+            {
+                cropsManager.Seed(selectedTilePosition);
+            }
+            else
+            {
+                cropsManager.Plow(selectedTilePosition);
+            }
+
+        }
+    }
     
 }

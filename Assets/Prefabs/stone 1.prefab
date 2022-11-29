@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4068580171425897147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.65, y: 3.29, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535d0f2a204e0064688d4f5f023bc58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpDrop: {fileID: 4346859606201405281, guid: 73e3966415360274eb522b87fc0e8c9e, type: 3}
+  pickUpDrop: {fileID: 1044077358056599935, guid: 85c51f8048ce5ae4a9042923937b091d, type: 3}
   dropCount: 10
   spread: 0.7
 --- !u!58 &1777248955381181630
