@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dfe9d2fe7b4ac9243a6dd4d8a73adf36
+guid: 9fa0587b2374b7b4ea4eea6c9d360f33
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playermovementupdown_0
+      name: playermovement_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 17
-        width: 36
-        height: 34
+        x: 9
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f178c46a3036fa446a8f7d26e89c564d
-      internalID: -941217936
+      spriteID: c35cc93171062ea40953452f665c024d
+      internalID: 1364060645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playermovementupdown_1
+      name: playermovement_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 15
-        width: 36
-        height: 34
+        x: 73
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a8f459ceb642542a27979234ca8dc4
-      internalID: -1877211697
+      spriteID: 2b826f5d939034942b096212980f2f2e
+      internalID: -994287768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playermovementupdown_2
+      name: playermovement_2
       rect:
         serializedVersion: 2
-        x: 136
-        y: 15
-        width: 36
-        height: 34
+        x: 137
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c2b56a899b153448b5943db9ee0dda3
-      internalID: 32226653
+      spriteID: 90b61f9d6098e924dbe0d8bc47705517
+      internalID: 1660737558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playermovementupdown_3
+      name: playermovement_3
       rect:
         serializedVersion: 2
-        x: 202
-        y: 15
-        width: 36
-        height: 34
+        x: 203
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aa9227ca2b06ab418279df181ae7c77
-      internalID: -958609945
+      spriteID: 16aaae8daa37faf43958a35ad627b617
+      internalID: -24238075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playermovementupdown_4
+      name: playermovement_4
       rect:
         serializedVersion: 2
-        x: 267
-        y: 15
-        width: 36
-        height: 34
+        x: 268
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b5baff98e31314fb024b03c41761bc
-      internalID: 1022688954
+      spriteID: 8ad56a093d2cc954d8215b16ae5688d8
+      internalID: 1778559360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playermovementupdown_5
+      name: playermovement_5
       rect:
         serializedVersion: 2
-        x: 331
-        y: 15
-        width: 36
-        height: 34
+        x: 332
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcbe7801fc4ed014497df7c5371cc3ea
-      internalID: 1546202945
+      spriteID: 61d69d1e2cc8f14438d3d1410623cc2f
+      internalID: -371578365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playermovementupdown_6
+      name: playermovement_6
       rect:
         serializedVersion: 2
-        x: 397
-        y: 15
-        width: 36
-        height: 34
+        x: 398
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e4ed06cb490c1a44b3bade4b4f2f410
-      internalID: -1149878380
+      spriteID: be25e41f7db56ed4a83721e9ea4d3257
+      internalID: -200515068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playermovementupdown_7
+      name: playermovement_7
       rect:
         serializedVersion: 2
-        x: 460
-        y: 17
-        width: 36
-        height: 34
+        x: 463
+        y: 14
+        width: 34
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a63601bcf5047a744a6efb763c215115
-      internalID: 141336410
+      spriteID: a777c39b2d30d124c8cc3d9905d2a6c5
+      internalID: 1496299180
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      playermovementupdown_6: -1149878380
-      playermovementupdown_4: 1022688954
-      playermovementupdown_3: -958609945
-      playermovementupdown_2: 32226653
-      playermovementupdown_5: 1546202945
-      playermovementupdown_7: 141336410
-      playermovementupdown_0: -941217936
-      playermovementupdown_1: -1877211697
+      playermovement_5: -371578365
+      playermovement_6: -200515068
+      playermovement_7: 1496299180
+      playermovement_4: 1778559360
+      playermovement_1: -994287768
+      playermovement_0: 1364060645
+      playermovement_3: -24238075
+      playermovement_2: 1660737558
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
