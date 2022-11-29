@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Basil
   m_EditorClassIdentifier: 
   Name: 
-  stackable: 0
-  icon: {fileID: 0}
+  stackable: 1
+  icon: {fileID: 21300000, guid: c698d61795cddf341869ba1dd676dea1, type: 3}

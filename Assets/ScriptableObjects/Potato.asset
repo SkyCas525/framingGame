@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b147bd028e9a3e04ea43c71658b47e2f, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
-  Name: 
-  stackable: 0
-  icon: {fileID: 0}
+  Name: Potato
+  stackable: 1
+  icon: {fileID: 21300000, guid: 1cbc04d62070078429584c55a8c01f81, type: 3}

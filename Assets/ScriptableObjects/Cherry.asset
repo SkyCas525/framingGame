@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b147bd028e9a3e04ea43c71658b47e2f, type: 3}
   m_Name: Cherry
   m_EditorClassIdentifier: 
-  Name: 
-  stackable: 0
-  icon: {fileID: 0}
+  Name: Cherry
+  stackable: 1
+  icon: {fileID: 21300000, guid: fff909d03673db440acb6f8049bb963b, type: 3}
