@@ -61,7 +61,6 @@ public class ToolCharacterController : MonoBehaviour
     private bool UseToolWorld()
     {
         Vector2 position = rgbd2D.position + character.lastMotionVector * offsetDistance;
-        Debug.Log("Golpe realizado");
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
 

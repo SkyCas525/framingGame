@@ -5,94 +5,54 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterController2D : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
-
-    [SerializeField] public Vector2 direction;
-
-    public static Transform player;
-
+    Rigidbody2D rigidBody2D;
+    [SerializeField] float Speed=2f;
     Vector2 motionVector;
     public Vector2 lastMotionVector;
+    //Animator animator;
+    public bool moving;
 
-    private Rigidbody2D RB2D;
-    SpriteRenderer spriteRenderer;
 
-    float xDir;
-    float yDir;
-    private Animator animator;
-
-    private void Start()
+    void Awake()
     {
-        RB2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        rigidBody2D = GetComponent<Rigidbody2D>();
+        //animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        motionVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if (xDir != 0||yDir !=0 )
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+
+
+        motionVector = new Vector2(
+            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical")).normalized;
+
+        //animator.SetFloat("horizontal", horizontal);
+        //animator.SetFloat("vetical", vertical);
+
+        //moving = horizontal != 0 || vertical != 0;
+        //animator.SetBool("moving", moving);
+
+        if (horizontal != 0 || vertical != 0 )
         {
-            lastMotionVector = new Vector2(xDir,yDir).normalized;
+            lastMotionVector = new Vector2(horizontal, vertical).normalized;
+
+            //animator.SetFloat("lastHorizontal", horizontal);
+            //animator.SetFloat("lastVertical", vertical);
         }
-
-
-
-
-
-
-
-
-
-
-
-        //---------------------------------------------------------------------------------------------------
-        xDir = Input.GetAxisRaw("Horizontal");
-        yDir = Input.GetAxisRaw("Vertical");
-
-        animator.SetFloat("xDir", xDir);
-        animator.SetFloat("yDir", yDir);
-
-        direction = new Vector2(xDir, yDir).normalized;
-
-        if (xDir != 0 || yDir != 0)
-        {
-            animator.SetFloat("lastX", xDir);
-            animator.SetFloat("lastY", yDir);
-        }
-
-
-        if (direction.x < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if (direction.x > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-
-        if (direction.y < 0)
-        {
-            spriteRenderer.flipY = false;
-            spriteRenderer.flipX = false;
-        }
-        if (direction.y > 0)
-        {
-            spriteRenderer.flipY = true;
-            spriteRenderer.flipX = false;
-        }
-
-
-
 
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        RB2D.MovePosition(RB2D.position + direction * movementSpeed * Time.fixedDeltaTime);
-
+        Move();
     }
 
-
-
+    void Move()
+    {
+        rigidBody2D.velocity = motionVector * Speed; 
+    }
 }
